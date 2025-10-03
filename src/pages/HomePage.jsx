@@ -35,7 +35,6 @@ const HomePage = () => {
       <Marquee />
       <Header />
       <Hero />
-      <Features />
       <AnimatedTitle text="Nuestros Productos" className="products-title" />
       <div class="products-container">
         {products.map((product, index) => (
@@ -48,6 +47,7 @@ const HomePage = () => {
           <TestimonialCard key={index} {...testimonial} index={index} />
         ))}
       </div>
+      <Features />
       <Footer />
       <WhatsAppButton />
     </div>

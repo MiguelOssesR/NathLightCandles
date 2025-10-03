@@ -1,5 +1,7 @@
 .hero-container {
   position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1; /* Ensure shadow is visible above other elements */
 }
 
 .carousel .slide img {

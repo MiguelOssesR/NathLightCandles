@@ -1,7 +1,7 @@
 .features-container {
   display: flex;
   justify-content: space-around;
-  padding: 20px 20px; /* Further reduce padding */
+  padding: 20px 20px;
   background-color: #f9f9f9;
   align-items: center;
 }
@@ -12,9 +12,9 @@
 }
 
 .feature-icon {
-  font-size: 1.8rem; /* Reduced from 2rem */
+  font-size: 1.8rem;
   color: #888;
-  margin-right: 10px; /* Reduced margin */
+  margin-right: 10px;
 }
 
 .feature-text-content {
@@ -23,13 +23,13 @@
 }
 
 .feature-item h3 {
-  font-size: 0.95rem; /* Reduced from 1rem */
+  font-size: 0.95rem;
   color: #555;
-  margin: 0 0 3px 0; /* Reduced bottom margin */
+  margin: 0 0 3px 0;
 }
 
 .feature-item p {
-  font-size: 0.8rem; /* Reduced from 0.85rem */
+  font-size: 0.8rem;
   color: #777;
   margin: 0;
 }
