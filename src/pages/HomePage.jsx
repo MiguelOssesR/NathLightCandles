@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
 import AnimatedTitle from '../components/AnimatedTitle';
+import WhatsAppButton from '../components/WhatsAppButton';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './HomePage.css';
 
@@ -33,6 +34,7 @@ const HomePage = () => {
         ))}
       </div>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

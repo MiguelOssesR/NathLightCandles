@@ -1,24 +1,43 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Hero.css';
 
 const Hero = () => {
   return (
-    <Carousel 
-        autoPlay 
-        infiniteLoop 
-        showThumbs={false} 
-        showStatus={false}
-        showIndicators={false}
-    >
-      <div>
-        <img src="https://lh3.googleusercontent.com/rd-gg-dl/AJfQ9KQUhEhVY3uBVrDO0YQlL91sl67BZ25gTLBxH4ceBzjybVKZ9Kmyb6zin-izPYe4_Au3c_skBNQYSvvdUOEJwQLan9SyCTWilCIDL1ORRVw_Nt0OsLYw-DBI2_OTlsT06_5ap3wzvmOtkS2dHi1uhYRSrz_dyyzMfHngWf9aLhDMtknVKmUvxVkTJWkn6m1U0HwRecQ-NxYpXEfkMXwRsGuG3PFHx-wmzm6EQORONZTDSyyL7YbXuxR5jFmBFC1a5ApNF6y4j_Uneao4MZhThgUH75WCPvD776YezwVxRuDNKWCZDs2jJ7OQpvL9yUziT0Ey5ZDbhq-17i6XlMmFfOsdb7G-ULViWkHO3cJv8UPOg20QDnzSDozDW4czfYU51_qhhDozO-fKbr6nczWT58mn2F6ThPhIYVJjAK-Cl38a3ETzaxsSEd8YlHOjbvBVCGKIuIPUxJMQql1beBokgBDWHH1DqrJQoS0H5AkxVw0bCV0OE4EZRzS2_ohroffbsxjuyS-mpe2XDLhuAhK4ouU-B9NSixsDFg_oFchZ9jf9kx9LB0LXDBWv3R3hndU4HMI8nGUuevQWWh_83Z9EjivT3koeNA5CvjUdzEx2mOIkxnkz_8F2g_X6gHQnC3NnJ_6fbwr5GDjo33jbYDat3OsJaTlYE6DSQfwQ_juHi2yXf-xug-mF0iy9c9MfhLBIDvMIS7vpFrJ3jzE9OpQ8kWxr1sJy7w3jj4cxf05o4wfN0GcTemTd9OMKK7iCGyb5b84Y6_sRGPB75W8NQEvsHys1nndE8hphd8vtnySm-I-TppBHGWchrhEoyIR42XcqpZSNj7GY6vA4goj-Uq7hwfEIWo-SCnFbfEUtqRV6WuC3hA61K5RvBRIUcDfh6n7z4y_VGA-K7FQprMcUYt9uJZGZPrwvKrJdHy80TdPLcMBlrGMotSdCkPaX2C7ZWscH1yfKrdID5MgchgRWi76GlbGAd8NAvrPq_FPkEbXFVgGYYXq9BwBnlHN3McAAUozcLE1O2_2V-CGwONUMSW6A_WClK2mCK1bAnQUm4B3y686qRtKcgD70GCGnl4o1KpOVJBJ34rSupwY5Nm79xtFTW4Hhnok2LAkG4H3cUV4wOuW-tcveiDz-q2efp8BeCMuIVUv1YPu881cmtvvwbPDBcD8TWJkSoJwqCWVETkYARehaK5Va4qmqiBngu82PnXZEIoRkgWnQbDXWpnURo6QFT5XQ4WhjF3Gl3PSlswkR3Fw=s1024" alt="candle 1" />
+    <div className="hero-container">
+      <Carousel 
+          autoPlay 
+          infiniteLoop 
+          showThumbs={false} 
+          showStatus={false}
+          showIndicators={false}
+      >
+        <div>
+          <img src="https://lh3.googleusercontent.com/rd-gg-dl/AJfQ9KQUhEhVY3uBVrDO0YQlL91sl67BZ25gTLBxH4ceBzjybVKZ9Kmyb6zin-izPYe4_Au3c_skBNQYSvvdUOEJwQLan9SyCTWilCIDL1ORRVw_Nt0OsLYw-DBI2_OTlsT06_5ap3wzvmOtkS2dHi1uhYRSrz_dyyzMfHngWf9aLhDMtknVKmUvxVkTJWkn6m1U0HwRecQ-NxYpXEfkMXwRsGuG3PFHx-wmzm6EQORONZTDSyyL7YbXuxR5jFmBFC1a5ApNF6y4j_Uneao4MZhThgUH75WCPvD776YezwVxRuDNKWCZDs2jJ7OQpvL9yUziT0Ey5ZDbhq-17i6XlMmFfOsdb7G-ULViWkHO3cJv8UPOg20QDnzSDozDW4czfYU51_qhhDozO-fKbr6nczWT58mn2F6ThPhIYVJjAK-Cl38a3ETzaxsSEd8YlHOjbvBVCGKIuIPUxJMQql1beBokgBDWHH1DqrJQoS0H5AkxVw0bCV0OE4EZRzS2_ohroffbsxjuyS-mpe2XDLhuAhK4ouU-B9NSixsDFg_oFchZ9jf9kx9LB0LXDBWv3R3hndU4HMI8nGUuevQWWh_83Z9EjivT3koeNA5CvjUdzEx2mOIkxnkz_8F2g_X6gHQnC3NnJ_6fbwr5GDjo33jbYDat3OsJaTlYE6DSQfwQ_juHi2yXf-xug-mF0iy9c9MfhLBIDvMIS7vpFrJ3jzE9OpQ8kWxr1sJy7w3jj4cxf05o4wfN0GcTemTd9OMKK7iCGyb5b84Y6_sRGPB75W8NQEvsHys1nndE8hphd8vtnySm-I-TppBHGWchrhEoyIR42XcqpZSNj7GY6vA4goj-Uq7hwfEIWo-SCnFbfEUtqRV6WuC3hA61K5RvBRIUcDfh6n7z4y_VGA-K7FQprMcUYt9uJZGZPrwvKrJdHy80TdPLcMBlrGMotSdCkPaX2C7ZWscH1yfKrdID5MgchgRWi76GlbGAd8NAvrPq_FPkEbXFVgGYYXq9BwBnlHN3McAAUozcLE1O2_2V-CGwONUMSW6A_WClK2mCK1bAnQUm4B3y686qRtKcgD70GCGnl4o1KpOVJBJ34rSupwY5Nm79xtFTW4Hhnok2LAkG4H3cUV4wOuW-tcveiDz-q2efp8BeCMuIVUv1YPu881cmtvvwbPDBcD8TWJkSoJwqCWVETkYARehaK5Va4qmqiBngu82PnXZEIoRkgWnQbDXWpnURo6QFT5XQ4WhjF3Gl3PSlswkR3Fw=s1024" alt="candle 1" />
+        </div>
+        <div>
+          <img src="https://lh3.googleusercontent.com/rd-gg-dl/AJfQ9KSCUQoQqwHMqYB7bR81h4Q_1smk4YochNVVamSa9Aw-rxLmZnzU3AuD74Qv9yF_Su_xOsJZ-vUGiKTSl1KCOBz-LiUTHEZ3HfvC_R1JKOKxsoRJNRvj_ITgW5SFZwl2uv0S3pNxJKXhB1pLOCbguSycSe9Uj-aBqiZcKPCdsJbXjsxSOK9zOIWCKSoLLXRanY96s8K9L4Ja6GutcDAopz6hC5_LSLrYJQiNRFEKDkQWNJ-7da1vt9hHLZcpUn3VWFzb7BkduKpxS5TttqPxN3-otIj6z9Eu4YvJS7EXMc0AhMyGE5kEDTt7mdmfet2C62hP79_0mObO-5JaU2V6crbvsSH6JAOIAXuc5ofN-dEoIKmSdQM4a9PByNlhs0VGNwFqbE88es_qfXuGhE6aSn8jshKUeW8yM_lcFDOYmqiw68cW68cJk7mIrG5N8qa8I5Axyhl5NC_EaF2-EkfRNBnAQ_pVkCtXgfOYWHoihqa2TDthY5Fla_W50EAAvzrJE8D5uUWRF3sLmvvhIywsSe6MvnDbQ84-YgXP0pgcXm2rfxhFHkE9lLdAymScmGz9tx4rs7sDJqfWc-oR6qpC8kwJxCEtSlMr4tc9WIJUU9qL6PW8mhmZIuV32l051RfTbonJ3DUmtBpTHsD1OzedTZbECvWiJWDSyh7IF8hqFBr_HD74MIqrfEsTZDz0fK7oYq_fvDb_x3qQsLLxPcUWtxXgVUmzMDx-CZ9guX1EQrVcHOVyvY3Fk1Oj2nH07a2aaZDEnrzNVC67j2OZbksQvaHC1RmWDXyNZD3SJcbqM2gBmHxHhW94PgIJQReeqW3bEW1jnuATpxO91dR8smxOjhpDySl0Xo3lzGk6vf5OVg_-92MmEU3GviidbaMhuRa012bB0ftBh2lz3TSgYH0ebGJKEKNePVLMSvDWKQ-gBMAjORH7-fMlCrY8SsjVwhNgc7htNh4YpxR84XL7Zx1-HgvS4ZQrI0Zb0Hi-Ivtlv-Fg0NnrqATwm79vw2rQfXsOuVXR5PtYdN-v8t3CFuXlhVXySnoMP0gLBx-JvCFbFuNUhsPVFc5dnYRIrs1GxRol3gfhSczJlvevO8EQcpo0uoWSaxapk53gbOCI_SP5uRv0tYZEKIL_Q2SFxPGzmKpN2iVWTs25-X4Xhtd6718_QTzAEYmo850ybVrPsyyM2WDNFaNl7VIDmwD9LaUbuv_r2Rr51cc2eFMl1PTaa36UgSHSVofMgv2CXnQMXbnYwJxy=s1024" alt="candle 2" />
+        </div>
+      </Carousel>
+      <div className="hero-text">
+        <motion.h1 
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          Bienvenido a Candlelit
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          Donde cada aroma cuenta una historia.
+        </motion.p>
       </div>
-      <div>
-        <img src="https://lh3.googleusercontent.com/rd-gg-dl/AJfQ9KSCUQoQqwHMqYB7bR81h4Q_1smk4YochNVVamSa9Aw-rxLmZnzU3AuD74Qv9yF_Su_xOsJZ-vUGiKTSl1KCOBz-LiUTHEZ3HfvC_R1JKOKxsoRJNRvj_ITgW5SFZwl2uv0S3pNxJKXhB1pLOCbguSycSe9Uj-aBqiZcKPCdsJbXjsxSOK9zOIWCKSoLLXRanY96s8K9L4Ja6GutcDAopz6hC5_LSLrYJQiNRFEKDkQWNJ-7da1vt9hHLZcpUn3VWFzb7BkduKpxS5TttqPxN3-otIj6z9Eu4YvJS7EXMc0AhMyGE5kEDTt7mdmfet2C62hP79_0mObO-5JaU2V6crbvsSH6JAOIAXuc5ofN-dEoIKmSdQM4a9PByNlhs0VGNwFqbE88es_qfXuGhE6aSn8jshKUeW8yM_lcFDOYmqiw68cW68cJk7mIrG5N8qa8I5Axyhl5NC_EaF2-EkfRNBnAQ_pVkCtXgfOYWHoihqa2TDthY5Fla_W50EAAvzrJE8D5uUWRF3sLmvvhIywsSe6MvnDbQ84-YgXP0pgcXm2rfxhFHkE9lLdAymScmGz9tx4rs7sDJqfWc-oR6qpC8kwJxCEtSlMr4tc9WIJUU9qL6PW8mhmZIuV32l051RfTbonJ3DUmtBpTHsD1OzedTZbECvWiJWDSyh7IF8hqFBr_HD74MIqrfEsTZDz0fK7oYq_fvDb_x3qQsLLxPcUWtxXgVUmzMDx-CZ9guX1EQrVcHOVyvY3Fk1Oj2nH07a2aaZDEnrzNVC67j2OZbksQvaHC1RmWDXyNZD3SJcbqM2gBmHxHhW94PgIJQReeqW3bEW1jnuATpxO91dR8smxOjhpDySl0Xo3lzGk6vf5OVg_-92MmEU3GviidbaMhuRa012bB0ftBh2lz3TSgYH0ebGJKEKNePVLMSvDWKQ-gBMAjORH7-fMlCrY8SsjVwhNgc7htNh4YpxR84XL7Zx1-HgvS4ZQrI0Zb0Hi-Ivtlv-Fg0NnrqATwm79vw2rQfXsOuVXR5PtYdN-v8t3CFuXlhVXySnoMP0gLBx-JvCFbFuNUhsPVFc5dnYRIrs1GxRol3gfhSczJlvevO8EQcpo0uoWSaxapk53gbOCI_SP5uRv0tYZEKIL_Q2SFxPGzmKpN2iVWTs25-X4Xhtd6718_QTzAEYmo850ybVrPsyyM2WDNFaNl7VIDmwD9LaUbuv_r2Rr51cc2eFMl1PTaa36UgSHSVofMgv2CXnQMXbnYwJxy=s1024" alt="candle 2" />
-      </div>
-    </Carousel>
+    </div>
   );
 };
 

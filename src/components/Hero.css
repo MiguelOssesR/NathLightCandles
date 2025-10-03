@@ -1,5 +1,27 @@
+.hero-container {
+  position: relative;
+}
+
 .carousel .slide img {
-    max-height: 400px; /* Ajusta este valor según tus necesidades */
-    object-fit: cover;
-  }
-  
+  max-height: 400px; /* Ajusta este valor según tus necesidades */
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+}
