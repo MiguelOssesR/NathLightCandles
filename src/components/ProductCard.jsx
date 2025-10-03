@@ -1,26 +1,47 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import './ProductCard.css';
 import { CartContext } from '../context/CartContext';
+import ProductModal from './ProductModal';
 
-const ProductCard = ({ name, price, image, index }) => {
+const ProductCard = ({ name, price, image, info, index }) => {
   const { addToCart } = useContext(CartContext);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const product = { name, price, image };
+  const product = { name, price, image, info };
+
+  const handleCardClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
-    <motion.div
-      className="product-card"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-    >
-      <img src={image} alt={name} />
-      <h3>{name}</h3>
-      <p>{price}</p>
-      <button onClick={() => addToCart(product)}>Añadir al carrito</button>
-    </motion.div>
+    <>
+      <motion.div
+        className="product-card"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+        onClick={handleCardClick}
+      >
+        <img src={image} alt={name} />
+        <h3>{name}</h3>
+        <p>{price}</p>
+        <button onClick={(e) => {
+          e.stopPropagation();
+          addToCart(product);
+        }}>Añadir al carrito</button>
+      </motion.div>
+      <ProductModal
+        product={isModalOpen ? product : null}
+        onClose={closeModal}
+        addToCart={addToCart}
+      />
+    </>
   );
 };
 

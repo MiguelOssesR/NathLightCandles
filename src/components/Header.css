@@ -17,6 +17,11 @@
   color: inherit;
 }
 
+.header-right-side {
+  display: flex;
+  align-items: center;
+}
+
 .header-nav {
   display: flex;
   align-items: center;
@@ -24,7 +29,8 @@
 
 .cart-icon {
   position: relative;
-  margin-right: 20px;
+  margin-left: 20px; /* Changed from margin-right */
+  color: black; /* Changed from purple */
 }
 
 .cart-count {
