@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import './Cart.css';
 
@@ -33,7 +34,9 @@ const Cart = () => {
           ))}
           <div className="cart-total">
             <h3>Total: ${getTotal()}</h3>
-            <button className="checkout-button">Proceder al Pago</button>
+            <Link to="/checkout">
+              <button className="checkout-button">Proceder al Pago</button>
+            </Link>
           </div>
         </>
       )}
