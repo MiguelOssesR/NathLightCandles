@@ -1,13 +1,5 @@
-
-.hero {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+.carousel .slide img {
+    max-height: 400px; /* Ajusta este valor según tus necesidades */
+    object-fit: cover;
+  }
+  

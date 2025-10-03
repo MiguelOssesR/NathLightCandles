@@ -3,17 +3,19 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './HomePage.css';
 
 const products = [
-  { name: 'Vela de Lavanda', price: '$15.00', image: 'https://via.placeholder.com/250x250.png/E8E8E8/333333?text=Lavanda' },
-  { name: 'Vela de Vainilla', price: '$15.00', image: 'https://via.placeholder.com/250x250.png/E8E8E8/333333?text=Vainilla' },
-  { name: 'Vela de Sándalo', price: '$18.00', image: 'https://via.placeholder.com/250x250.png/E8E8E8/333333?text=Sándalo' },
-  { name: 'Vela de Rosas', price: '$16.00', image: 'https://via.placeholder.com/250x250.png/E8E8E8/333333?text=Rosas' },
-  { name: 'Vela de Rosas', price: '$16.00', image: 'https://via.placeholder.com/250x250.png/E8E8E8/333333?text=Rosas' },
-  { name: 'Vela de Rosas', price: '$16.00', image: 'https://via.placeholder.com/250x250.png/E8E8E8/333333?text=Rosas' },
-  { name: 'Vela de Rosas', price: '$16.00', image: 'https://via.placeholder.com/250x250.png/E8E8E8/333333?text=Rosas' },
-  { name: 'Vela de Rosas', price: '$16.00', image: 'https://via.placeholder.com/250x250.png/E8E8E8/333333?text=Rosas' },
+  { name: 'Vela de Lavanda', price: '$15.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ohv9ivpVHOaE4_0r3VrTr9C12LZF34P5DgG9VLWUVelUdTsR-N3OuTZMNO4PAFlLT9U&usqp=CAU' },
+  { name: 'Vela de Lavanda', price: '$15.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ohv9ivpVHOaE4_0r3VrTr9C12LZF34P5DgG9VLWUVelUdTsR-N3OuTZMNO4PAFlLT9U&usqp=CAU' },
+  { name: 'Vela de Lavanda', price: '$15.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ohv9ivpVHOaE4_0r3VrTr9C12LZF34P5DgG9VLWUVelUdTsR-N3OuTZMNO4PAFlLT9U&usqp=CAU' },
+  { name: 'Vela de Lavanda', price: '$15.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ohv9ivpVHOaE4_0r3VrTr9C12LZF34P5DgG9VLWUVelUdTsR-N3OuTZMNO4PAFlLT9U&usqp=CAU' },
+  { name: 'Vela de Lavanda', price: '$15.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ohv9ivpVHOaE4_0r3VrTr9C12LZF34P5DgG9VLWUVelUdTsR-N3OuTZMNO4PAFlLT9U&usqp=CAU' },
+  { name: 'Vela de Lavanda', price: '$15.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ohv9ivpVHOaE4_0r3VrTr9C12LZF34P5DgG9VLWUVelUdTsR-N3OuTZMNO4PAFlLT9U&usqp=CAU' },
+  { name: 'Vela de Lavanda', price: '$15.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ohv9ivpVHOaE4_0r3VrTr9C12LZF34P5DgG9VLWUVelUdTsR-N3OuTZMNO4PAFlLT9U&usqp=CAU' },
+  { name: 'Vela de Lavanda', price: '$15.00', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ohv9ivpVHOaE4_0r3VrTr9C12LZF34P5DgG9VLWUVelUdTsR-N3OuTZMNO4PAFlLT9U&usqp=CAU' },
+
 ];
 
 const HomePage = () => {
@@ -21,8 +23,8 @@ const HomePage = () => {
     <div>
       <Header />
       <Hero />
-      <h2 className="products-title">Nuestros Productos</h2>
-      <div className="products-container">
+      <h2 class="products-title">Nuestros Productos</h2>
+      <div class="products-container">
         {products.map((product, index) => (
           <ProductCard key={index} {...product} />
         ))}
