@@ -1,4 +1,5 @@
 import React from 'react';
+import Marquee from '../components/Marquee';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import ProductCard from '../components/ProductCard';
@@ -21,6 +22,7 @@ const products = [
 const HomePage = () => {
   return (
     <div>
+      <Marquee />
       <Header />
       <Hero />
       <h2 class="products-title">Nuestros Productos</h2>
