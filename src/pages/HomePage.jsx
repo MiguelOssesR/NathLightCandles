@@ -2,6 +2,7 @@ import React from 'react';
 import Marquee from '../components/Marquee';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import Features from '../components/Features';
 import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
 import AnimatedTitle from '../components/AnimatedTitle';
@@ -34,6 +35,7 @@ const HomePage = () => {
       <Marquee />
       <Header />
       <Hero />
+      <Features />
       <AnimatedTitle text="Nuestros Productos" className="products-title" />
       <div class="products-container">
         {products.map((product, index) => (
