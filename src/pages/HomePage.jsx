@@ -28,7 +28,7 @@ const HomePage = () => {
       <h2 class="products-title">Nuestros Productos</h2>
       <div class="products-container">
         {products.map((product, index) => (
-          <ProductCard key={index} {...product} />
+          <ProductCard key={index} {...product} index={index} />
         ))}
       </div>
       <Footer />
