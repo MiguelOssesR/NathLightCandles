@@ -1,14 +1,21 @@
-
-.products-title {
-  text-align: center;
-  font-size: 2rem;
-  margin: 2rem 0;
-}
-
 .products-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  padding: 0 2rem;
+  padding: 20px;
+}
+
+.products-title, .testimonials-title {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
 }

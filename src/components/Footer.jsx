@@ -5,7 +5,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2023 Velas Aromáticas. Todos los derechos reservados.</p>
+      <p>&copy; 2025 NathLightCandles. Todos los derechos reservados.</p>
     </footer>
   );
 };

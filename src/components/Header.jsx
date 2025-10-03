@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-logo">
-        <Link to="/"><h1>Velas Aromáticas</h1></Link>
+        <Link to="/"><h1>NATHLIGHTCANDLES</h1></Link>
       </div>
       <div className="header-nav">
         <Link to="/cart" className="cart-icon">
