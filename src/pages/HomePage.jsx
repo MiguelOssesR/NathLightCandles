@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
+import AnimatedTitle from '../components/AnimatedTitle';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './HomePage.css';
 
@@ -25,7 +26,7 @@ const HomePage = () => {
       <Marquee />
       <Header />
       <Hero />
-      <h2 class="products-title">Nuestros Productos</h2>
+      <AnimatedTitle text="Nuestros Productos" className="products-title" />
       <div class="products-container">
         {products.map((product, index) => (
           <ProductCard key={index} {...product} index={index} />
